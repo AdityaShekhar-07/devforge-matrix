@@ -65,24 +65,18 @@ export default function App() {
     if (!searchQuery.trim()) return [];
     return toolsList.filter(t => t.name.toLowerCase().includes(searchQuery.toLowerCase()));
   }, [searchQuery]);
-  /* --- DYNAMIC SEO TITLE HOOK --- */
+
   useEffect(() => {
-    // 1. Check if we are inside a tool route
     if (location.pathname.startsWith('/tools/')) {
-      // Extract the ID from the URL (e.g., 'json-formatter')
       const currentToolId = location.pathname.split('/')[2];
-      // Find the matching tool in your registry
       const currentTool = toolsList.find(t => t.id === currentToolId);
 
       if (currentTool) {
-        // Format: "JSON Prettifier & Validator | DevForge Matrix"
         document.title = `${currentTool.name} | DevForge Matrix`;
       } else {
-        // Fallback if URL is invalid
         document.title = 'DevForge Matrix | Developer Utility Platform';
       }
     } else {
-      // 2. We are on the homepage
       document.title = 'DevForge Matrix | Developer Utility Platform';
     }
   }, [location, toolsList]);
@@ -95,20 +89,8 @@ export default function App() {
             className="flex items-center gap-3 select-none cursor-pointer"
             onClick={() => navigate('/')}
           >
-            {/* Light Theme Logo */}
-            <img 
-              src="/logo-light.png" 
-              alt="DevForge Light" 
-              className="logo-light h-10 w-auto object-contain" 
-            />
-
-            {/* Dark Theme Logo */}
-            <img 
-              src="/logo-dark.png" 
-              alt="DevForge Dark" 
-              className="logo-dark h-10 w-auto object-contain" 
-            />
-
+            <img src="/logo-light.png" alt="DevForge Light" className="logo-light h-10 w-auto object-contain" />
+            <img src="/logo-dark.png" alt="DevForge Dark" className="logo-dark h-10 w-auto object-contain" />
             <span className="brand-text text-lg font-bold tracking-tight">
               DevForge Matrix
             </span>
@@ -142,7 +124,6 @@ export default function App() {
           </nav>
         </div>
 
-        {/* SEARCH WORKSPACE INPUT ELEMENT */}
         <div className="flex-1 max-w-sm mx-12 relative">
           <div className="relative">
             <input 
@@ -187,6 +168,7 @@ export default function App() {
           <button 
             onClick={() => setDarkMode(!darkMode)}
             className="p-2 rounded-xl border hover:border-slate-300 dark:hover:border-slate-600 cursor-pointer transition-all shadow-sm"
+            aria-label="Toggle Theme"
           >
             {darkMode ? (
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -213,7 +195,6 @@ export default function App() {
               <p className="text-slate-500 dark:text-slate-400 mb-8">Select a tool from the navigation bar or use the search box to get started. All tools run 100% locally in your browser.</p>
             </div>
           } />
-          
           <Route path="/tools/image-converter" element={<ImageConverter />} />
           <Route path="/tools/qr-gen" element={<QrGenerator />} />
           <Route path="/tools/meme-gen" element={<MemeGenerator />} />
