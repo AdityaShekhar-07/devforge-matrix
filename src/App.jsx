@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 
 import ImageConverter from './tools/ImageConverter';
 import CaseConverter from './tools/CaseConverter';
@@ -217,6 +218,7 @@ export default function App() {
           <Route path="/tools/password-gen" element={<PasswordGenerator />} />
         </Routes>
       </main>
+      <Analytics />
     </div>
   );
 }
