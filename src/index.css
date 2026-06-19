@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  transition: background 0.2s ease, color 0.15s ease;
+}
+
+/* ==========================================
+   LIGHT THEME INTERFACE SPECIFICATION
+   ========================================== */
+html {
+  background-image: url('./assets/light-bg.png') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  color: #1e293b !important;
+}
+
+html header {
+  background-color: rgba(255, 255, 255, 0.4) !important;
+  backdrop-filter: blur(12px) !important;
+  border-color: rgba(226, 218, 202, 0.6) !important;
+}
+
+html main {
+  background-color: transparent !important;
+}
+
+/* Thematic Container Cards */
+html .tool-card {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(8px) !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+}
+
+html textarea, 
+html input, 
+html select {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+html textarea:focus, 
+html input:focus, 
+html select:focus {
+  border-color: #6366f1 !important;
+}
+
+/* Core Buttons */
+html .btn-primary {
+  background-color: #c27d38 !important;
+  color: #ffffff !important;
+}
+html .btn-primary:hover {
+  background-color: #aa6b2e !important;
+}
+
+html .btn-secondary {
+  background-color: rgba(238, 220, 197, 0.5) !important;
+  color: #5c4731 !important;
+  border-color: rgba(194, 125, 56, 0.3) !important;
+}
+html .btn-secondary:hover {
+  background-color: rgba(230, 210, 185, 0.7) !important;
+}
+
+/* Dropdown Overlay Layering */
+html nav div div, 
+html .absolute.top-full {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(16px) !important;
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 10px 25px -5px rgba(30, 41, 59, 0.1) !important;
+}
+
+html nav div div button,
+html .absolute.top-full button {
+  color: #334155 !important;
+}
+html nav div div button:hover,
+html .absolute.top-full button:hover {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+}
+
+
+/* ==========================================
+   DARK THEME INTERFACE SPECIFICATION (.dark)
+   ========================================== */
+html.dark {
+  background-image: url('./assets/dark-bg.png') !important;
+  color: #f8fafc !important;
+}
+
+html.dark header {
+  background-color: rgba(15, 23, 42, 0.4) !important;
+  border-color: rgba(31, 35, 53, 0.4) !important;
+}
+
+html.dark .tool-card {
+  background-color: rgba(19, 21, 31, 0.75) !important;
+  backdrop-filter: blur(8px) !important;
+  border-color: rgba(31, 35, 53, 0.6) !important;
+  color: #f8fafc !important;
+}
+
+html.dark textarea, 
+html.dark input, 
+html.dark select {
+  background-color: rgba(15, 23, 42, 0.6) !important;
+  color: #f8fafc !important;
+  border-color: rgba(31, 35, 53, 0.6) !important;
+}
+
+html.dark .btn-primary {
+  background-color: #4f46e5 !important;
+  color: #ffffff !important;
+}
+html.dark .btn-primary:hover {
+  background-color: #4338ca !important;
+}
+
+html.dark .btn-secondary {
+  background-color: rgba(31, 35, 53, 0.8) !important;
+  color: #f4f4f7 !important;
+  border-color: rgba(255, 255, 255, 0.05) !important;
+}
+html.dark .btn-secondary:hover {
+  background-color: rgba(45, 52, 78, 0.9) !important;
+}
+
+html.dark nav div div,
+html.dark .absolute.top-full {
+  background-color: rgba(15, 23, 42, 0.96) !important;
+  border-color: rgba(31, 35, 53, 0.8) !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4) !important;
+}
+
+html.dark nav div div button,
+html.dark .absolute.top-full button {
+  color: #cbd5e1 !important;
+}
+html.dark nav div div button:hover,
+html.dark .absolute.top-full button:hover {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  color: #f8fafc !important;
+}
+
+/* --- Dynamic Logo Theme Swap --- */
+.logo-dark { display: none; }
+.logo-light { display: block; }
+.dark .logo-light { display: none; }
+.dark .logo-dark { display: block; }
+
+/* --- Dynamic Text Theme Swap --- */
+.brand-text { color: #0f172a; } /* Dark Slate/Black for Light Mode */
+.dark .brand-text { color: #ffffff; } /* Pure White for Dark Mode */
