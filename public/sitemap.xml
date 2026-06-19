@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url>
+    <loc>https://devforge-matrix.vercel.app/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Dev Tools -->
+  <url><loc>https://devforge-matrix.vercel.app/base64-tool</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://devforge-matrix.vercel.app/case-converter</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://devforge-matrix.vercel.app/cron-predictor</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://devforge-matrix.vercel.app/csv-to-json</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://devforge-matrix.vercel.app/diff-checker</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://devforge-matrix.vercel.app/epoch-converter</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://devforge-matrix.vercel.app/hash-tool</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://devforge-matrix.vercel.app/json-tool</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://devforge-matrix.vercel.app/markdown-previewer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://devforge-matrix.vercel.app/regex-tester</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://devforge-matrix.vercel.app/url-encoder</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://devforge-matrix.vercel.app/user-agent-debugger</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- Media & Office Tools -->
+  <url><loc>https://devforge-matrix.vercel.app/image-converter</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://devforge-matrix.vercel.app/image-text-extractor</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://devforge-matrix.vercel.app/meme-generator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://devforge-matrix.vercel.app/lorem-ipsum-generator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://devforge-matrix.vercel.app/bmi-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- Security & Growth -->
+  <url><loc>https://devforge-matrix.vercel.app/password-generator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://devforge-matrix.vercel.app/qr-generator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://devforge-matrix.vercel.app/linkedin-tool</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+</urlset>
